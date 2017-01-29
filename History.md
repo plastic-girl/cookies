@@ -1,6 +1,7 @@
 unreleased
 ==========
 
+  * Add `sameSite` option for SameSite cookie support
   * Fix bug when `keys` were set but setting cookies did not default to `signed`
 
 0.6.2 / 2016-11-12
