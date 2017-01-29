@@ -25,8 +25,8 @@ describe('HTTP', function () {
           .set( "signed", "bar", { signed: true } )
 
           // mimic a signed cookie, but with a bogus signature
-          .set( "tampered", "baz" )
-          .set( "tampered.sig", "bogus" )
+          .set( "tampered", "baz", { signed: false } )
+          .set( "tampered.sig", "bogus", { signed: false } )
 
           // set a cookie that will be overwritten
           .set( "overwrite", "old-value", { signed: true } )

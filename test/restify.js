@@ -50,8 +50,8 @@ function setCookies(req, res) {
   cookies
     .set('unsigned', 'foo', { signed:false, httpOnly: false })
     .set('signed', 'bar', { signed: true })
-    .set('tampered', 'baz')
-    .set('tampered.sig', 'bogus')
+    .set('tampered', 'baz', { signed: false })
+    .set('tampered.sig', 'bogus', { signed: false })
     .set('overwrite', 'old-value', { signed: true })
     .set('overwrite', 'new-value', { overwrite: true, signed: true })
 }
